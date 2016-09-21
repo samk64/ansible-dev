@@ -1,0 +1,11 @@
+---
+# playbook for mac mini development
+
+- hosts: macmini
+  # setup homebrew on mac mini
+  vars:
+    homebrew_installed_packages:
+      - ansible
+      - tmux         
+  role:
+    - { role: geerlingguy.homebrew }
